@@ -51,43 +51,47 @@ function purchase() {
         connection.query("SELECT * FROM products", function(err, res) {
             var itemID = answers.userWants;
             var quantity = answers.userAmount;
+            // takes the user input and subtracts one from the id in order to equal arrays postion to the id number
+            var dynamicID = res[itemID - 1];
             // 1 will remain but 9 will need to be dynamic based on highst id number in table
             if (itemID < 1 || itemID > 9) {
                 console.log("Opps please choose an ID from the above list");
                 purchase();
-            } else if (quantity > res[itemID - 1].stock_quantity || quantity < 1) {
-                console.log("Sorry we do not have that many " + res[itemID - 1].product_name + "'s");
+            } else if (quantity > dynamicID.stock_quantity || quantity < 1) {
+                console.log("Sorry we do not have that many " + dynamicID.product_name + "s");
             } else {
                 // takes the user input and subtracts one from the id in order to equal arrays postion to the id number
-                var dynamicID = res[itemID - 1];
+                // var dynamicID = res[itemID - 1];
                 console.log("You've selected " + quantity + " " + dynamicID.product_name + "'s");
-               "UPDATE products SET ? WHERE ?", [{
-                                stock_quantity: res[itemID - 1].stock_quantity - quantity
+                stockQuanityChange();
+
+                function stockQuanityChange() {
+                    var newQuntity = dynamicID.stock_quantity - quantity;
+                    console.log("Hey look here");
+                    console.log("-----------------------------------");
+                    // console.log(itemID);
+                    var query = connection.query(
+                        "UPDATE products SET ? WHERE ?", [{
+                                stock_quantity: newQuntity
                             },
                             {
-                                id: dynamicID
+                                id: itemID
                             }
-                        ];
+                        ],
+                        function(err, res) {
+                            console.log(" products updated!\n");
+                            console.log("Your total is $" + quantity * dynamicID.price);
+                           
+                        }
+                    );
+
+                };
+
+
             };
 
         });
     });
-  };
-// function updateProduct() { 
-// connection.query("SELECT * FROM products", function(err, res){ 
-// var query = connection.query(
-                        
-//  }); 
-// };
-
-
-
-
-
-
-
-
-
-
+};
 
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">id</Data></Cell>
+			<Cell><Data ss:Type="String">product_name</Data></Cell>
+			<Cell><Data ss:Type="String">department</Data></Cell>
+			<Cell><Data ss:Type="String">price</Data></Cell>
+			<Cell><Data ss:Type="String">stock_quantity</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="Number">1</Data></Cell>
+			<Cell><Data ss:Type="String">Calander</Data></Cell>
+			<Cell><Data ss:Type="String">Gift</Data></Cell>
+			<Cell><Data ss:Type="Number">12</Data></Cell>
+			<Cell><Data ss:Type="Number">40000</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">2</Data></Cell>
+			<Cell><Data ss:Type="String">Hot Wheels</Data></Cell>
+			<Cell><Data ss:Type="String">Toy</Data></Cell>
+			<Cell><Data ss:Type="Number">0.99</Data></Cell>
+			<Cell><Data ss:Type="Number">3000</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">3</Data></Cell>
+			<Cell><Data ss:Type="String">Blender</Data></Cell>
+			<Cell><Data ss:Type="String">Houseware</Data></Cell>
+			<Cell><Data ss:Type="Number">450</Data></Cell>
+			<Cell><Data ss:Type="Number">800</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">4</Data></Cell>
+			<Cell><Data ss:Type="String">Grand Piano</Data></Cell>
+			<Cell><Data ss:Type="String">Music</Data></Cell>
+			<Cell><Data ss:Type="Number">10000</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">5</Data></Cell>
+			<Cell><Data ss:Type="String">Fidget Cube</Data></Cell>
+			<Cell><Data ss:Type="String">Toy</Data></Cell>
+			<Cell><Data ss:Type="Number">19.99</Data></Cell>
+			<Cell><Data ss:Type="Number">5000</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">6</Data></Cell>
+			<Cell><Data ss:Type="String">Bamazon Mimic</Data></Cell>
+			<Cell><Data ss:Type="String">Tech</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">80000</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">7</Data></Cell>
+			<Cell><Data ss:Type="String">Nikon D500</Data></Cell>
+			<Cell><Data ss:Type="String">Camera</Data></Cell>
+			<Cell><Data ss:Type="Number">3000</Data></Cell>
+			<Cell><Data ss:Type="Number">400</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">8</Data></Cell>
+			<Cell><Data ss:Type="String">Hurricane Shutters</Data></Cell>
+			<Cell><Data ss:Type="String">Houseware</Data></Cell>
+			<Cell><Data ss:Type="Number">3.5</Data></Cell>
+			<Cell><Data ss:Type="Number">300</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">9</Data></Cell>
+			<Cell><Data ss:Type="String">Genaric Blender</Data></Cell>
+			<Cell><Data ss:Type="String">Houseware</Data></Cell>
+			<Cell><Data ss:Type="Number">450</Data></Cell>
+			<Cell><Data ss:Type="Number">800</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
