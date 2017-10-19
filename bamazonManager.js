@@ -29,7 +29,7 @@ function managerOption() {
         choices: ["View products for sale", "Low invetory items", "Add too invetory", "Add new product"],
         name: "track"
     }]).then(function(listPick) {
-        switch(listPick.track){
+        switch (listPick.track) {
             case "View products for sale":
                 getInfo();
                 break;
@@ -37,10 +37,10 @@ function managerOption() {
                 getInvty();
                 break;
             case "Add too invetory":
-                addInvty();    
+                addInvty();
                 break;
             case "Add new product":
-                addProduct();    
+                addProduct();
 
         }
     });
@@ -50,19 +50,52 @@ function managerOption() {
 
 // this function will display all information 
 function getInfo() {
-console.log("LOL")
+    connection.query("SELECT * FROM products", function(err, res) {
+        for (var i = 0; i < res.length; i++) {
+            console.log("ID #" + res[i].id + " | Item Name " + res[i].product_name + " | Found in " + res[i].department + " Department" + " | Cost $" + res[i].price + " | " + res[i].stock_quantity + " in Stock");
+        }
+        console.log("-----------------------------------");
+        runAgain();
+    });
 };
 
 function getInvty() {
-    console.log("Hey whats up hello")
+    connection.query("SELECT * FROM products", function(err, res) {
+        for (var i = 0; i < res.length; i++) {
+        if (res[i].stock_quantity < 1000) {
+            console.log(res[i].product_name + " has " + res[i].stock_quantity +" units");
+        }
+        };
+    runAgain();
+});
 };
 
 function addInvty() {
     console.log("I just met you and this is crazy");
+    runAgain();
 };
 
 function addProduct() {
-    console.log("Hey oh Lets go!");  
+    console.log("Hey oh Lets go!");
+    runAgain();
 };
 
+function runAgain() {
+    inquirer.prompt([{
+        type: 'list',
+        message: "Would you like to run a different task ?",
+        choices: ["Yes", "No"],
+        name: "choose"
+    }]).then(function(choicePick) {
+        switch (choicePick.choose) {
+            case "Yes":
+                managerOption();
+                break;
+            case "No":
+                console.log("Signing off");
+                connection.end();
+                break;
+        }
 
+    });
+}
