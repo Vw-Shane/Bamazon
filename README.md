@@ -1,4 +1,4 @@
-# Bamazon v.04
+# Bamazon v.05
 	.01)
  Make SQL Database and populate it with item_id,product_name
 department_name, price, stock_quantity 
@@ -15,10 +15,14 @@ If not, the app should log a phrase like Insufficient quantity!, and then preven
 	.04
 Take the quantity of users requested item and subtract from database, after which display the users total. 
 
-
-
-
-
+	.05
+Create a new Node application called bamazonManager.js
+Running this application will:
+ List a set of menu options:
+ View Products for Sale
+ View Low Inventory
+ Add to Inventory
+ Add New Product
 
 
 

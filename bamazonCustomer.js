@@ -67,7 +67,7 @@ function purchase() {
 
                 function stockQuanityChange() {
                     var newQuntity = dynamicID.stock_quantity - quantity;
-                    console.log("Hey look here");
+                    
                     console.log("-----------------------------------");
                     // console.log(itemID);
                     var query = connection.query(
@@ -79,9 +79,9 @@ function purchase() {
                             }
                         ],
                         function(err, res) {
-                            console.log(" products updated!\n");
+                            
                             console.log("Your total is $" + quantity * dynamicID.price);
-                           
+                           connection.end();
                         }
                     );
 
