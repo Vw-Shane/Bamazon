@@ -1,4 +1,4 @@
-# Bamazon v.05
+# Bamazon v.06
 	.01)
  Make SQL Database and populate it with item_id,product_name
 department_name, price, stock_quantity 
@@ -23,6 +23,12 @@ Running this application will:
  View Low Inventory
  Add to Inventory
  Add New Product
+
+	.06
+If a manager selects View Products for Sale, the app should list every available item: the item IDs, names, prices, and quantities.
+
+If a manager selects View Low Inventory, then it should list all items with an inventory count lower than one thousand.
+
 
 
 
